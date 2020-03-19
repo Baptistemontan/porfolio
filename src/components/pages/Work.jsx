@@ -1,9 +1,16 @@
 import React from "react";
 
 const Projects = [
-  { name: "MineSweeper", link: "", github: "", description: "" },
+  {
+    name: "MineSweeper",
+    imageName: "minesweeper.png",
+    link: "",
+    github: "",
+    description: ""
+  },
   {
     name: "PathFinder",
+    imageName: "pathfinder.png",
     link: "https://baptistemontan.github.io/pathfinder-react/",
     github: "https://github.com/Baptistemontan/pathfinder-react",
     description: ""
@@ -20,11 +27,11 @@ export default function Work() {
       <div className="projects">
         {Projects.map(projet => {
           return (
-            <div className="item">
+            <div className="item" key={projet.name}>
               <a className="square" href={projet.link}>
                 <img
-                  src={"images/projects/" + projet.name.toLowerCase() + ".png"}
-                  alt="project picture"
+                  src={"/images/projects/" + projet.imageName}
+                  alt="project"
                 />
                 <div>
                   <div>

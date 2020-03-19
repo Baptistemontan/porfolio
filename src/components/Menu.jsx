@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 
 // export default function Menu({ onClick, names, current }) {
 export default class Menu extends Component {
@@ -20,7 +21,7 @@ export default class Menu extends Component {
     this.setState({ active: false });
   }
   render() {
-    const { names, current } = this.props;
+    const { pages, current } = this.props;
     const classShow = this.state.active ? " show" : "";
     const classBtnShow = this.state.active ? " close" : "";
     return (
@@ -36,17 +37,18 @@ export default class Menu extends Component {
           </div>
           <div className={"menu-branding-background" + classShow}></div>
           <ul className={"menu-nav" + classShow}>
-            {names.map(name => {
+            {pages.map(page => {
               const className =
-                "nav-item" + (name === current ? " current" : "");
+                "nav-item" + (page.url === current ? " current" : "");
               return (
-                <li className={className + classShow} key={name}>
-                  <div
-                    onClick={() => this.handleLink(name)}
+                <li className={className + classShow} key={page.url}>
+                  <Link
+                    to={"/" + page.url}
                     className="nav-link"
+                    onClick={() => this.handleLink(page.url)}
                   >
-                    {name}
-                  </div>
+                    {page.name}
+                  </Link>
                 </li>
               );
             })}

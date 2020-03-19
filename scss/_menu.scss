@@ -96,7 +96,7 @@
       //slide in from right
       transform: translate3d(0, 0, 0);
     }
-    &.current > div {
+    &.current > a {
       color: $secondary-color;
     }
   }
