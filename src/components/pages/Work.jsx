@@ -26,13 +26,11 @@ export default function Work() {
       <h2 className="sm-heading">here is some of my projects :</h2>
       <div className="projects">
         {Projects.map(projet => {
+          const image = require("../../images/projects/" + projet.imageName);
           return (
             <div className="item" key={projet.name}>
               <a className="square" href={projet.link}>
-                <img
-                  src={"/images/projects/" + projet.imageName}
-                  alt="project"
-                />
+                <img src={image} alt="project" />
                 <div>
                   <div>
                     <p>{projet.description}</p>
