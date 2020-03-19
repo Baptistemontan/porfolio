@@ -11,6 +11,7 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
+    "sass": "node-sass -w scss/ -o src/ --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
