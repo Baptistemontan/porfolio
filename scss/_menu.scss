@@ -14,7 +14,7 @@
     @include easeOut;
   }
   //rotate into X
-  &.close {
+  &.show {
     transform: rotate(180deg);
     .btn-line {
       // line 1 rotate

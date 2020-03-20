@@ -46,25 +46,25 @@ $secondary-cell-color: darken($primary-color, 5);
 // media query mixins
 @mixin mediaXl {
   //XL
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 1200px) {
     @content;
   }
 }
 @mixin mediaLg {
   //Large
-  @media screen and (min-width: 800) and (max-width: 1170px) {
+  @media screen and (min-width: 850) and (max-width: 1200px) {
     @content;
   }
 }
 @mixin mediaMd {
   //Medium
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 850px) {
     @content;
   }
 }
 @mixin mediaSm {
   // Small
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }

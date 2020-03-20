@@ -1,5 +1,7 @@
 import React from "react";
 
+//same as contact page, I have an array of projects
+//so I can modify the html of all project in one place and add/modify one very simply
 const Projects = [
   {
     name: "MineSweeper",
