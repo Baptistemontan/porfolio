@@ -26,7 +26,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename="/portfolio">
         <Menu
           pages={Pages}
           current={this.state.currentPage}
