@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contacts from "./pages/Contacts";
-import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { Route, HashRouter as Router, Switch } from "react-router-dom";
 
 const Pages = [
   { name: "Home", url: "", component: Home },
@@ -26,7 +26,7 @@ export default class Index extends Component {
 
   render() {
     return (
-      <Router basename="./portfolio">
+      <Router>
         <Menu
           pages={Pages}
           current={this.state.currentPage}
