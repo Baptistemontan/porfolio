@@ -29,10 +29,7 @@ export default function Work() {
           return (
             <div className="item" key={projet.name}>
               <a className="square" href={projet.link}>
-                <img
-                  src={"./images/projects/" + projet.imageName}
-                  alt="project"
-                />
+                <img src={"./images/" + projet.imageName} alt="project" />
                 <div>
                   <div>
                     <p>{projet.description}</p>
