@@ -6,16 +6,16 @@ const Projects = [
   {
     name: "MineSweeper",
     imageName: "minesweeper.png",
-    link: "",
+    link: "https://baptistemontan.github.io/my-portfolio/minesweeper.html",
     github: "",
-    description: ""
+    description: "This is a MineSweeper Game (link is to my old portfolio)"
   },
   {
     name: "PathFinder",
     imageName: "pathfinder.png",
     link: "https://baptistemontan.github.io/pathfinder-react/",
     github: "https://github.com/Baptistemontan/pathfinder-react",
-    description: ""
+    description: "This is a Pathfinder Visualizer that I made under React"
   }
 ];
 
