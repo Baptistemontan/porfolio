@@ -16,7 +16,7 @@ export default function Home() {
         <a href="https://www.facebook.com/baptiste.montan">
           <i className="fab fa-facebook fa-2x"></i>
         </a>
-        <a href="https://www.linkedin.com/in/baptiste-d-15a0b0130">
+        <a href="https://www.linkedin.com/in/baptiste-de-montangon-15a0b0130/">
           <i className="fab fa-linkedin fa-2x"></i>
         </a>
         <a href="https://github.com/Baptistemontan">
