@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Work from "./pages/Work";
 import Contacts from "./pages/Contacts";
+import Minesweeper from "./pages/Minesweeper";
 //nomrally I should use BrowserRouter but it does not work with gh-pages
 //so I use HashRouter, it create a /#/ in front of every link for stability
 import { Route, HashRouter as Router, Switch } from "react-router-dom";
@@ -15,7 +16,7 @@ const Pages = [
   { name: "Home", url: "", component: Home },
   { name: "About Me", url: "about", component: About },
   { name: "My Work", url: "work", component: Work },
-  { name: "Contacts", url: "contacts", component: Contacts }
+  { name: "Contacts", url: "contacts", component: Contacts },
 ];
 
 export default class Index extends Component {
@@ -23,12 +24,12 @@ export default class Index extends Component {
     super(props);
     //I set the active page to the home page
     this.state = {
-      currentPage: Pages[0].url
+      currentPage: Pages[0].url,
     };
   }
   //this handle the click on a menu link
   //it change the state to the current active page
-  handleMenuClick = url => {
+  handleMenuClick = (url) => {
     this.setState({ currentPage: url });
   };
 
@@ -43,7 +44,7 @@ export default class Index extends Component {
         />
         {/* then we look at the different routes by mapping the pages array */}
         <Switch>
-          {Pages.map(page => (
+          {Pages.map((page) => (
             <Route
               exact
               path={"/" + page.url}
@@ -51,6 +52,7 @@ export default class Index extends Component {
               key={page.url}
             />
           ))}
+          <Route exact path={"/minesweeper"} component={Minesweeper} />
           {/* here we have the default route (to prevent 404 error) */}
           <Route component={Home} />
         </Switch>
