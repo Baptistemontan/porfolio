@@ -95,6 +95,115 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+#minesweeper-container {
+  width: 100%;
+  margin-bottom: 2rem; }
+  #minesweeper-container .lg-heading {
+    margin: 4rem; }
+
+#minesweeper {
+  display: grid;
+  width: 700px;
+  font-size: 1rem;
+  margin: auto;
+  grid-template-areas: "board infos" "board buttons";
+  grid-template-columns: 8fr 2fr; }
+  #minesweeper #board {
+    grid-area: board;
+    display: grid;
+    margin-right: 0;
+    margin-left: 0;
+    font-weight: bold;
+    cursor: pointer; }
+    #minesweeper #board .cell {
+      border: solid thin #373737;
+      margin: 2%;
+      border-radius: 10%;
+      padding-bottom: 100%;
+      position: relative;
+      background-color: #c4c4c4;
+      background-size: 60%;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #eece1a; }
+      #minesweeper #board .cell.hidden {
+        border: solid thin #c4c4c4;
+        background-color: #373737;
+        color: #fff; }
+        #minesweeper #board .cell.hidden:hover {
+          color: #000;
+          box-shadow: 1px 1px 5px black;
+          background-color: #eece1a; }
+      #minesweeper #board .cell div {
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        top: 50%;
+        font-size: 1rem;
+        transform: translate(0, -50%);
+        text-align: center; }
+      #minesweeper #board .cell.lose {
+        background-color: tomato; }
+      #minesweeper #board .cell.good {
+        background-color: #2ecc71; }
+      #minesweeper #board .cell.bomb {
+        color: #000; }
+      #minesweeper #board .cell .n1 {
+        color: #1e3799; }
+      #minesweeper #board .cell .n2 {
+        color: #27ae60; }
+      #minesweeper #board .cell .n3 {
+        color: #c0392b; }
+      #minesweeper #board .cell .n4 {
+        color: #0c2461; }
+      #minesweeper #board .cell .n5 {
+        color: #cd6133; }
+  #minesweeper .button {
+    margin-top: 5%;
+    margin-left: 5%;
+    text-align: center;
+    cursor: pointer;
+    border: solid thin #c4c4c4;
+    color: #fff;
+    background-color: #373737;
+    border-radius: 5px;
+    transition: all 0.5s ease-out; }
+    #minesweeper .button:hover {
+      color: #000;
+      box-shadow: 1px 1px 5px black;
+      background: #eece1a; }
+  #minesweeper #infos {
+    grid-area: infos; }
+    #minesweeper #infos #flag-toggle {
+      display: none;
+      align-items: center;
+      padding: 2%;
+      margin: 5%;
+      cursor: pointer;
+      border: solid thin #c4c4c4;
+      color: #fff;
+      background-color: #373737;
+      border-radius: 5px;
+      transition: all 0.5s ease-out; }
+      #minesweeper #infos #flag-toggle.active {
+        color: #000;
+        box-shadow: 1px 1px 5px black;
+        background: #eece1a; }
+  #minesweeper .infos {
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex; }
+  #minesweeper #buttons {
+    position: relative;
+    grid-area: buttons;
+    height: 100%; }
+  #minesweeper #buttons2 {
+    display: none; }
+  #minesweeper .button-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%; }
+
 * {
   box-sizing: border-box; }
 
@@ -185,7 +294,7 @@ main {
 .about-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .about-info a {
     border-bottom: solid 2px; }
@@ -346,7 +455,7 @@ main {
       width: 150px;
       height: 150px; }
   .about-info {
-    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); }
@@ -354,7 +463,7 @@ main {
     width: 100%; }
   #minesweeper {
     width: 90%;
-    grid-template-areas: "infos" "board" "buttons";
+    grid-template-areas: "infos" "board" "buttons";
     grid-template-columns: 1fr; }
     #minesweeper #infos {
       display: flex;
